@@ -1,13 +1,11 @@
-import myAjax from "./api/myAjax"
+import el from './api/elFunction'
 
 function App() {
-  myAjax("https://jsonplaceholder.typicode.com/posts/1",{type:"get"})
-  .then(data=>data.toUpperCase())
-  .then(data=>console.log('data after uppercase',data))
+  console.log(el('div',{className:'my-div'},["Hi there",{}]))
   
   return (
     <div className="App">
-      
+      {el('div',{className:'my-div'},["Hi there"])}
     </div>
   );
 }
