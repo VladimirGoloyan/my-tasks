@@ -1,7 +1,11 @@
-export default class domElement {
+export default class domElement{
+  element = null;
+
   constructor(type) {
-    const el = type
-      ? document.createElement(type)
-      : document.createElement("div");
+    this.element = document.createElement(type)
+  }
+
+  draw(){
+    return this.element;
   }
 }
